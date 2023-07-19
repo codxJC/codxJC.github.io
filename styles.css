@@ -1,0 +1,147 @@
+:root {
+    box-sizing: border-box;
+    /*Applies border box sizing to the root element*/
+    /* font-size: 0.9rem;
+    line-height: 1.2; */
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+    /* Tells all other elements and pseudo-elements to inherit their box sizing */
+}
+
+html,
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Inter Tight', sans-serif;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap;    */
+}
+
+header {
+    width: 100vw;
+    /* display: flex;
+    justify-content: space-between;*/
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+}
+
+nav ul {
+    height: 80px;
+    list-style: none;
+    margin: 0 auto; 
+    padding: 0;
+    background-color: #A5A1FF;
+  }
+  
+  nav ul li {
+    display: inline-block; 
+    height: 5em;
+    line-height: 5em; 
+    list-style: none;
+    padding: 0 10px;
+    transition: background .5s; 
+  }
+
+  nav ul li:hover {
+    background: #f4f1de;
+    cursor: pointer; 
+    transition: background .5s;  
+  }
+
+nav a  {
+    color: #1B1B1F;
+    text-decoration: none;
+}
+
+#welcome-section {
+    height: 100vh;
+    margin-top: 5em;
+    background-color: #1B1B1F;
+}
+
+#about,
+#work-experience {
+    height: auto;
+    background-color: #f4f1de;
+}
+
+#projects,
+#contact {
+    height: auto;
+    background-color: #1B1B1F;
+}
+
+#welcome-section h1,
+#projects h1,
+#contact h1 {
+    font-family: Archivo, sans-serif;
+    font-size: 3.5em;
+    line-height: 2;
+    color: #A5A1FF;
+    padding-left: 1.5em;
+}
+
+#about h1,
+#work-experience h1{
+    font-family: Archivo, sans-serif;
+    font-size: 3.5em;
+    line-height: 2;
+    padding-left: 1.5em;
+    color: #1B1B1F;
+}
+
+.footer {
+    display: flex;
+    background-color: #A5A1FF;
+}
+
+.footer h1 {
+    color: #1B1B1F ;
+}
+
+
+
+/*******************************************************/
+/********* Devices Larger than 784px **********/
+/*******************************************************/
+
+
+@media (min-width: 49em) {
+    /* :root {
+        font-size: 1rem;
+    }
+
+    html, 
+    body {
+        width: 90vw;
+    } */
+
+    /* nav {
+        display: flex;
+        flex-wrap: nowrap;
+        height: 3.5em;
+    } */
+
+    .project-tile {
+        width: 50%;
+        height: auto;   
+    }
+}
