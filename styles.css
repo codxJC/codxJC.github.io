@@ -14,25 +14,24 @@
 
 html,
 body {
+    width: 100vw;
     margin: 0 auto;
     padding: 0;
     font-family: 'Inter Tight', sans-serif;
-    width: 100%;
 }
 
-main {
+h4, h5 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
     display: flex;
     flex-direction: column;
     /* flex-wrap: wrap;    */
 }
 
-header {
-    width: 100vw;
-    /* display: flex;
-    justify-content: space-between;*/
-}
-
-h3 {
+nav h3 {
     margin: 0;
     padding: 0;
 }
@@ -41,10 +40,11 @@ nav {
     position: fixed;
     z-index: 1;
     top: 0;
+    width: 100vw;
+    text-align: center;
 }
 
 nav ul {
-    height: 80px;
     list-style: none;
     margin: 0 auto; 
     padding: 0;
@@ -52,12 +52,12 @@ nav ul {
   }
   
   nav ul li {
-    display: inline-block; 
+    display: block; 
     height: 5em;
     line-height: 5em; 
     list-style: none;
-    padding: 0 10px;
     transition: background .5s; 
+    
   }
 
   nav ul li:hover {
@@ -72,40 +72,99 @@ nav a  {
 }
 
 #welcome-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     height: 100vh;
-    margin-top: 5em;
+    margin-top: 25em;
     background-color: #1B1B1F;
+    color: #A5A1FF;
+    align-content: space-around;
+    padding: 0 2em;;
+}
+
+#welcome-section h1 {
+    font-family: Archivo, sans-serif;
+    font-size: 3em;
+    margin-top: 3em;
+    /* color: #A5A1FF; */
+}
+
+#welcome-section p {
+    line-height: 1.5;
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+}
+
+.social {
+    background-color: #A5A1FF;
+}
+
+.social img {
+    width: 2em;
 }
 
 #about,
 #work-experience {
     height: auto;
     background-color: #f4f1de;
+    padding: 2em;
 }
 
 #projects,
 #contact {
     height: auto;
     background-color: #1B1B1F;
+    color: #A5A1FF;
+    padding: 2em;
 }
 
-#welcome-section h1,
 #projects h1,
 #contact h1 {
     font-family: Archivo, sans-serif;
-    font-size: 3.5em;
-    line-height: 2;
-    color: #A5A1FF;
-    padding-left: 1.5em;
+    font-size: 2.5em;
+    /* line-height: 3.5; */
+    
 }
 
 #about h1,
 #work-experience h1{
     font-family: Archivo, sans-serif;
-    font-size: 3.5em;
-    line-height: 2;
-    padding-left: 1.5em;
+    font-size: 2.5em;
+    /* line-height: 2; */
     color: #1B1B1F;
+}
+
+.education {
+    line-height: 1.5;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 2em;
+}
+
+.soft-skills {
+    display: flex;
+    flex-wrap: wrap;
+    pointer-events: none;
+    justify-content: flex-start;
+    gap: 1em;
+    margin-bottom: 2em;
+}
+
+.markdown {
+    position: relative;
+    left: 0.7em;
+    top: 0.3em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
 }
 
 .footer {
@@ -125,20 +184,41 @@ nav a  {
 
 
 @media (min-width: 49em) {
-    /* :root {
-        font-size: 1rem;
-    }
 
-    html, 
-    body {
-        width: 90vw;
-    } */
-
-    /* nav {
+      nav ul {
         display: flex;
-        flex-wrap: nowrap;
-        height: 3.5em;
-    } */
+        justify-content: flex-end;
+        gap: 0.25em;
+        height: 80px;
+        width: 100vw;
+        margin: 0 auto; 
+        padding: 0 1.75em;
+        /* background-color: #A5A1FF; */
+      }
+      
+      nav ul li {
+        display: inline-block; 
+        width: 5.75em;
+      }
+    
+      nav ul li:hover {
+        background: #f4f1de;
+        cursor: pointer; 
+        transition: background .5s;  
+      }
+    
+    nav a  {
+        color: #1B1B1F;
+        text-decoration: none;
+    }
+    #welcome-section {
+        margin-top: 5em;
+        align-content: space-around;
+    }
+    
+    #welcome-section h1 {
+        font-size: 5em;
+    }
 
     .project-tile {
         width: 50%;
