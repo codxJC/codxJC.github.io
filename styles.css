@@ -31,6 +31,10 @@ body {
     /* flex-wrap: wrap;    */
 }
 
+/* span img {
+    display: none;
+} */
+
 nav h3 {
     margin: 0;
     padding: 0;
@@ -49,6 +53,7 @@ nav ul {
     margin: 0 auto; 
     padding: 0;
     background-color: #A5A1FF;
+    overflow-y: scroll;
   }
   
   nav ul li {
@@ -162,6 +167,12 @@ nav a  {
     top: 0.3em;
 }
 
+.now-admin {
+    position: relative;
+    left: 1.7em;
+    /* top: 0.3em; */
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -184,6 +195,14 @@ form {
 
 
 @media (min-width: 49em) {
+    header {
+        display: flex;
+    }
+
+    span img {
+        height: 5em;
+        background-color: #A5A1FF;
+    }
 
       nav ul {
         display: flex;
@@ -197,7 +216,7 @@ form {
       }
       
       nav ul li {
-        display: inline-block; 
+        display: inline; 
         width: 5.75em;
       }
     
