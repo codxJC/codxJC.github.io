@@ -114,23 +114,7 @@ nav a  {
 #work-experience {
     height: auto;
     background-color: #f4f1de;
-    padding: 2em;
-}
-
-#projects,
-#contact {
-    height: auto;
-    background-color: #1B1B1F;
-    color: #A5A1FF;
-    padding: 2em;
-}
-
-#projects h1,
-#contact h1 {
-    font-family: Archivo, sans-serif;
-    font-size: 2.5em;
-    /* line-height: 3.5; */
-    
+    padding: 0 2em 0;
 }
 
 #about h1,
@@ -139,6 +123,12 @@ nav a  {
     font-size: 2.5em;
     /* line-height: 2; */
     color: #1B1B1F;
+    margin: 0 auto;
+    padding: 1em 0 0.5em;
+}
+
+#about h3 {
+    margin: 0 auto 1em;
 }
 
 .education {
@@ -149,7 +139,21 @@ nav a  {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin-bottom: 2em;
+    /* margin-bottom: 2em; */
+}
+
+#about img {
+    margin-bottom: 1em;
+}
+
+#about button {
+    font-family: inherit;
+    border-radius: 0;
+    font-size: 1em;
+    background-color: #1B1B1F;
+    /* background-color: #FF6666; */
+    color: #f4f1de;
+    padding: 0.5em 0.75em;
 }
 
 .soft-skills {
@@ -158,7 +162,8 @@ nav a  {
     pointer-events: none;
     justify-content: flex-start;
     gap: 1em;
-    margin-bottom: 2em;
+    padding-bottom: 1em;
+    /* margin-bottom: 2em; */
 }
 
 .markdown {
@@ -169,18 +174,84 @@ nav a  {
 
 .now-admin {
     position: relative;
-    left: 1.7em;
-    /* top: 0.3em; */
+    left: 0.5em;
+}
+
+#projects,
+#contact {
+    height: auto;
+    background-color: #1B1B1F;
+    color: #A5A1FF;
+    padding: 0 2em 2em;
+}
+
+#projects h1,
+#contact h1 {
+    font-family: Archivo, sans-serif;
+    font-size: 2.5em;
+    margin: 0 auto;
+    padding: 1em 0 0.5em;
+    /* line-height: 3.5; */
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+.project-tile {
+    display: flex;
+    flex-wrap: nowrap;
+    /* width: 90vw; */
+    background-color: #A5A1FF;
+    color: #1B1B1F;
+    padding: 0.75em;
+    gap: 0.75em;
+}
+
+.project-preview {
+    width: 50%;
+    height: 12em;
+    background-color: #1B1B1F;
+}
+
+.project-description {
+    /* background-color:#f4f1de; */
+    width: 50%;
+}
+
+#projects h2 {
+    margin: 0 auto;
 }
 
 form {
     display: flex;
     flex-direction: column;
+    width: 75vw;
+    margin: 0 auto;
+    padding-bottom: 2em;
+}
+
+label {
+    margin: 0.5em 0 0.25em;
+}
+
+input,
+textarea {
+    font-family: inherit;
+    font-size: 1em;
+    background-color: #f4f1de;
 }
 
 .footer {
     display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #A5A1FF;
+    height: 4em;
+    padding: 0 2em;
 }
 
 .footer h1 {
@@ -200,7 +271,7 @@ form {
     }
 
     span img {
-        height: 5em;
+        height: 3em;
         background-color: #A5A1FF;
     }
 
