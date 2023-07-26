@@ -16,6 +16,11 @@
 
 <body>
     <main>
+
+        <!-- ****************** -->
+        <!-- Navigation Section -->
+        <!-- ****************** -->
+
         <nav id="navbar">
             <header>
                 <ul>
@@ -27,9 +32,6 @@
                         </a></li>
                     <li><a class="nav-link" href="#projects">
                             <h3>Portfolio</h3>
-                        </a></li>
-                    <li><a class="nav-link" href="#work-experience">
-                            <h3>Experience</h3>
                         </a></li>
                     <li><a class="nav-link" href="#contact">
                             <h3>Contact</h3>
@@ -45,12 +47,15 @@
         <section id="welcome-section" class="welcome">
             <h1>Hello,<br> I am Vivian :)</h1>
             <p>A ServiceNow administrator and aspiring developer.<br>This is my student resume webpage.</p> <br>
-            <!-- <div class="social"> -->
-            <!-- <span class="social"><a href="https://github.com/codxJC" target="_blank"><img src="./resources/github.png"
-                    alt="github"></a></span>
-        <span class="social"><a href="https://www.linkedin.com/in/p-triantafyllou/" target="_blank"><img
-                    src="./resources/linkedin.png" alt="linkedin"></a></span> -->
-            <!-- </div> -->
+
+            <div class="social">
+                <a href="https://github.com/codxJC" target="_blank" title="Check out my Github profile :)">
+                    <img src="./resources/github.png" alt="Check out my Github profile :)"></a>
+                <a href="https://www.linkedin.com/in/p-triantafyllou/" target="_blank"
+                    title="Connect with me on Linkedin :)">
+                    <img src="./resources/linkedin.png" alt="linkedin"></a>
+
+            </div>
         </section>
 
         <!-- ************* -->
@@ -58,10 +63,10 @@
         <!-- ************* -->
 
         <section id="about" class="about">
-            <h1>Education</h1>
-            <!-- <div class="education">
+            <!-- <h1>Education</h1>
+            <div class="education">
                 <h4>ServiceNow Certified System Administrator (CSA)</h4>
-            </div> -->
+            </div>
             <div class="education">
                 <h4>Service Design and Management with ServiceNow</h4>
                 <h5>Northeastern University London</h5>
@@ -69,33 +74,49 @@
             <div class="education">
                 <h4>MSc Civil Engineering</h4>
                 <h5>University of Patras</h5>
-            </div>
-            <h1>Skills</h1>
-            <h3>Coding</h3>
-            <div class="tech-stack">
-
-                <img height=62px src="./resources/html-5.png" alt="HTML5">
-                <img height=62px src="./resources/css-3.png" alt="CSS3">
-                <img height=62px src="./resources/markdown.svg" alt="Markdown" class="markdown">
-                <!-- <img src="" alt="JS">
-                <img src="" alt="SQLite"> -->
-            </div>
-            <!-- <div class="automation">
-                <h3>Automation & ITSM</h3>
-                <img height=62px src="./resources/ServiceNow-admin.svg" alt="now-admin"
-                    title="ServiceNow Certified System Administrator" class="now-admin">
             </div> -->
 
-            <h3>Soft Skills</h3>
-            <div class="soft-skills">
+            <h1>Skills</h1>
+            <div id="skills">
+                <div class="hard-skills">
+                    <h3>Coding</h3>
+                    <div class="coding">
+                        <img height=62px src="./resources/html-5.png" alt="HTML5">
+                        <img height=62px src="./resources/css-3.png" alt="CSS3">
+                        <img height=62px src="./resources/markdown.svg" alt="Markdown" class="markdown">
+                    </div>
 
-                <button>Problem Solving</button>
-                <button>Analytical Skills</button>
-                <button>Collaboration </button>
-                <button>Working Independently</button>
-                <button>Attention to detail</button>
-                <button>Communication</button>
-                <button>Continuous Improvement</button>
+
+                    <div class="automation">
+                        <h3>Automation & ITSM</h3>
+                        <br>
+                        <a href="https://nowlearning.servicenow.com/lxp?id=nl_public&user=codxJC" target="_blank"
+                            title="Opens my ServiceNow resume in a new tab">
+                            <img src="./resources/ServiceNow_logo.svg" alt="ServiceNow logo">
+                        </a>
+                    </div>
+                </div>
+
+
+
+                <div class="soft-skills">
+                    <h3>Soft Skills</h3>
+                    <div id="buttons-container">
+                        <button class="skill-button" type="button">Problem Solving</button>
+
+                        <button class="skill-button" type="button">Analytical Skills</button>
+
+                        <button class="skill-button" type="button">Collaboration</button>
+
+                        <button class="skill-button" type="button">Working Independently</button>
+
+                        <button class="skill-button" type="button">Attention to detail</button>
+
+                        <button class="skill-button" type="button">Communication</button>
+
+                        <button class="skill-button" type="button">Continuous Improvement</button>
+                    </div>
+                </div>
             </div>
 
         </section>
@@ -120,7 +141,9 @@
 
                         <div class="project-description">
                             <h3>Registration Form</h3>
-                            <a href="https://github.com/codxJC/P7.Marvel_Fitness_Registration_Form" target="_blank" title="Github repository"><img height=24px src="./resources/github-dark.png" alt="project repository"></a>
+                            <a href="https://github.com/codxJC/P7.Marvel_Fitness_Registration_Form" target="_blank"
+                                title="Github repository"><img height=24px src="./resources/github-dark.png"
+                                    alt="project repository"></a>
                         </div>
 
                         <div class="project-techicons">
@@ -142,29 +165,9 @@
 
                         <div class="project-description">
                             <h3>Landing Page</h3>
-                            <a href="https://github.com/codxJC/P8._EasyDiet_Landing" target="_blank" title="Github repository"><img height=24px src="./resources/github-dark.png" alt="project repository"></a>
-                        </div>
-
-                        <div class="project-techicons">
-                            <img height=32px src="./resources/html-5.png" alt="HTML5 icon">
-                            <img height=32px src="./resources/css-3.png" alt="CSS3 icon">
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-tile">
-
-                    <div class="project-preview">
-                        <img src="./resources/Documentation_project.png" alt="Documentation Project">
-                    </div>
-
-                    <div id="project-description-3">
-
-                        <div class="project-description">
-                            <h3>Landing Page</h3>
-                            <a href="https://github.com/codxJC/P9.CSS_Documentation_Webpage" target="_blank" title="Github repository"><img height=24px src="./resources/github-dark.png" alt="project repository"></a>
+                            <a href="https://github.com/codxJC/P8._EasyDiet_Landing" target="_blank"
+                                title="Github repository"><img height=24px src="./resources/github-dark.png"
+                                    alt="project repository"></a>
                         </div>
 
                         <div class="project-techicons">
@@ -173,43 +176,9 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 4 -->
-                <div class="project-tile">
-
-                    <div class="project-preview">
-                        <img src="./resources/LAnding_page_desktop.png" alt="Documentation Project">
-                    </div>
-
-                    <div id="project-description-4">
-
-                        <div class="project-description">
-                            <h3>Landing Page</h3>
-                            <a href="https://github.com/codxJC/P9.CSS_Documentation_Webpage" target="_blank" title="Github repository"><img height=24px src="./resources/github-dark.png" alt="project repository"></a>
-                        </div>
-
-                        <div class="project-techicons">
-                            <img height=32px src="./resources/html-5.png" alt="HTML5 icon">
-                            <img height=32px src="./resources/css-3.png" alt="CSS3 icon">
-                        </div>
-                    </div>
-                </div>
-
-
-
 
             </div>
 
-
-        </section>
-
-        <!-- *********************** -->
-        <!-- Work Experience Section -->
-        <!-- *********************** -->
-
-        <section id="work-experience" class="work-experience">
-            <h1>Work Experience</h1>
-            <a id="profile-link" href="" target="_blank"></a>
         </section>
 
         <!-- *************** -->
@@ -220,13 +189,16 @@
             <h1>Contact Me</h1>
             <div id="form">
                 <form action="href=#">
-                    <label id="name-label">Name:</label>
+                    <label id="type-label">Name:</label>
                     <input type="text" name="name" id="name" placeholder="Enter your name" required>
+
                     <label id="email-label">Email:</label>
                     <input type="email" name="email" id="email" value="" placeholder="e.g. johndoe@example.com"
                         required>
-                    <label class="inquiry">Enter your message:</label>
+
+                    <label for="special">Enter your message:</label>
                     <textarea name="special" id="special" rows="4"></textarea>
+
                 </form>
             </div>
         </section>

@@ -20,21 +20,17 @@ body {
     font-family: 'Inter Tight', sans-serif;
 }
 
-h4, h5 {
+h3,
+h4,
+h5 {
+    display: inline-block;
     margin: 0;
-    padding: 0;
+    padding: 0 0 0.5em;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    /* flex-wrap: wrap;    */
-}
-
-nav h3 {
-    margin: 0;
-    padding: 0;
-}
+/* ***************** */
+/* Mobile Navigation */
+/* ***************** */
 
 nav {
     position: fixed;
@@ -45,49 +41,59 @@ nav {
 }
 
 nav ul {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.25em;
+    height: 80px;
+    width: 100vw;
     list-style: none;
-    margin: 0 auto; 
-    padding: 0;
+    margin: 0 auto;
+    padding: 0 1.5em;
     background-color: #A5A1FF;
-    overflow-y: scroll;
-  }
-  
-  nav ul li {
-    display: block; 
+}
+
+nav ul li {
+    display: inline;
     height: auto;
-    line-height: 5em; 
+    width: 5.75em;
+    line-height: 5em;
     list-style: none;
-    transition: background .5s; 
-    
-  }
+    transition: background .5s;
 
-  nav ul li:hover {
+}
+
+nav ul li:hover {
     background: #f4f1de;
-    cursor: pointer; 
-    transition: background .5s;  
-  }
+    cursor: pointer;
+    transition: background .5s;
+}
 
-nav a  {
+nav a {
     color: #1B1B1F;
     text-decoration: none;
 }
+
+/* *************** */
+/* Welcome Section */
+/* *************** */
 
 #welcome-section {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    justify-content: center;
     height: 100vh;
-    margin-top: 25em;
+    margin-top: 1em;
+    padding: 0 1.5em 7em;
     background-color: #1B1B1F;
     color: #A5A1FF;
-    align-content: space-around;
-    padding: 0 2em;;
+    align-items: stretch;
 }
 
 #welcome-section h1 {
     font-family: Archivo, sans-serif;
     font-size: 3em;
-    margin-top: 3em;
+    /* margin-top: 3em; */
     /* color: #A5A1FF; */
 }
 
@@ -100,21 +106,26 @@ nav a  {
 
 .social {
     background-color: #A5A1FF;
+    margin-bottom: 0; 
+    padding-left: 0.5em;
 }
 
 .social img {
     width: 2em;
+    margin: 0.5em 0.25em 0;  
 }
 
-#about,
-#work-experience {
+/* ************* */
+/* About Section */
+/* ************* */
+
+#about {
     height: auto;
     background-color: #f4f1de;
-    padding: 0 2em 0;
+    padding: 0 1.5em 0;
 }
 
-#about h1,
-#work-experience h1{
+#about h1 {
     font-family: Archivo, sans-serif;
     font-size: 2.5em;
     /* line-height: 2; */
@@ -123,43 +134,38 @@ nav a  {
     padding: 1em 0 0.5em;
 }
 
-#about h3 {
-    margin: 0 auto 1em;
-}
+/* Education Section */
 
 .education {
     line-height: 1.5;
 }
 
-.tech-stack {
+#skills {
     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    column-gap: 4em;
+}
+
+.hard-skills {
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+    text-align: left;
+    padding-bottom: 2em;
+}
+
+.coding {
+    display: flex;
+    flex-wrap: nowrap;
     justify-content: flex-start;
+    margin-top: 1em;
     /* margin-bottom: 2em; */
 }
 
-#about img {
-    margin-bottom: 1em;
-}
-
-#about button {
-    font-family: inherit;
-    border-radius: 0;
-    font-size: 1em;
-    background-color: #1B1B1F;
-    /* background-color: #FF6666; */
-    color: #f4f1de;
-    padding: 0.5em 0.75em;
-}
-
-.soft-skills {
-    display: flex;
-    flex-wrap: wrap;
-    pointer-events: none;
-    justify-content: flex-start;
-    gap: 1em;
-    padding-bottom: 1em;
-    /* margin-bottom: 2em; */
+.coding img,
+.automation img {
+    margin-bottom: 0.85em;
 }
 
 .markdown {
@@ -168,10 +174,44 @@ nav a  {
     top: 0.3em;
 }
 
-.now-admin {
-    position: relative;
-    left: 0.5em;
+#buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding-bottom: 2em;
+    padding-top: 0;
 }
+
+.soft-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /* margin-top: -1em; */
+    gap: 1em;
+}
+
+/* .soft-skills h3 {
+    padding-bottom: 1em;
+} */
+
+
+.skill-button {
+    font-family: inherit;
+    font-size: 1em;
+    border-radius: 0;
+    background-color: #1B1B1F;
+    color: #f4f1de;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0 0.75em;
+    margin:0;
+    pointer-events: none;
+    height: 2.5em;
+}
+
+/* ***************** */
+/* Portfolio Section */
+/* ***************** */
 
 #projects,
 #contact {
@@ -190,17 +230,17 @@ nav a  {
     /* line-height: 3.5; */
 }
 
+#projects h2,
+#projects h3 {
+    margin: 0 auto;
+    padding: 0.25em 0;
+}
+
 .projects {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2em;
-}
-
-#projects h2,
-#projects h3 {
-    margin: 0 auto;
-    padding: 0.25em 0;
 }
 
 .project-tile {
@@ -231,25 +271,9 @@ nav a  {
     margin-top: 1.25em;
 }
 
-/*.project-description {
-    display: flex;
-    flex-wrap: nowrap; 
-    width: 100%;
-    flex-direction: column;
-    justify-content: space-between;*/
-    /* width: 100%;
-    align-items: flex-start; 
-}*/
-
-/* .project-description a {
-    text-decoration: none;
-    color: black;
-    font-size: 0.8em;
-} */
-
-/* .project-description img {
-    float: right;
-} */
+/* *************** */
+/* Contact Section */
+/* *************** */
 
 form {
     display: flex;
@@ -270,6 +294,10 @@ textarea {
     background-color: #f4f1de;
 }
 
+/* ************** */
+/* Footer Section */
+/* ************** */
+
 .footer {
     display: flex;
     justify-content: center;
@@ -280,68 +308,55 @@ textarea {
 }
 
 .footer h1 {
-    color: #1B1B1F ;
+    color: #1B1B1F;
 }
 
-/*******************************************************/
-/********* Devices Larger than 784px **********/
-/*******************************************************/
+/**********************************************/
+/********* Devices Larger than 432px **********/
+/**********************************************/
+
 @media (min-width: 27em) {
+
     .project-tile {
-        max-width:25em;
+        max-width: 25em;
         margin-top: 1em;
-    } 
+    }
+
+    #skills {
+        flex-direction: row;
+    }
 }
 
-/*******************************************************/
+/**********************************************/
 /********* Devices Larger than 784px **********/
-/*******************************************************/
+/**********************************************/
 
 
 @media (min-width: 49em) {
+
     header {
         display: flex;
     }
 
-    span img {
-        height: 3em;
-        background-color: #A5A1FF;
+    /* Navigation */
+
+    nav ul {
+        justify-content: flex-end;
+        padding: 0 0.75em;
     }
 
-      nav ul {
-        display: flex;
-        justify-content: flex-end;
-        gap: 0.25em;
-        height: 80px;
-        width: 100vw;
-        margin: 0 auto; 
-        padding: 0 1.75em;
-        /* background-color: #A5A1FF; */
-      }
-      
-      nav ul li {
-        display: inline; 
-        width: 5.75em;
-      }
-    
-      nav ul li:hover {
-        background: #f4f1de;
-        cursor: pointer; 
-        transition: background .5s;  
-      }
-    
-    nav a  {
-        color: #1B1B1F;
-        text-decoration: none;
-    }
+    /* Welcome section */
+
     #welcome-section {
         margin-top: 5em;
         align-content: space-around;
     }
-    
+
     #welcome-section h1 {
         font-size: 5em;
     }
+
+    /* Portfolio section */
 
     .projects {
         flex-wrap: wrap;
@@ -353,11 +368,11 @@ textarea {
         flex-wrap: wrap;
         /* margin: 2em 0 0; */
     }
-    
+
     .project-preview {
         width: 100%;
     }
-    
+
     .project-description a {
         text-decoration: none;
         color: black;
