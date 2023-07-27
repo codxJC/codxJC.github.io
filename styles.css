@@ -143,7 +143,7 @@ nav a {
 #skills {
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     column-gap: 4em;
 }
 
@@ -178,15 +178,14 @@ nav a {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
-    padding-bottom: 2em;
     padding-top: 0;
+    margin-bottom: 4em;
 }
 
 .soft-skills {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    /* margin-top: -1em; */
     gap: 1em;
 }
 
@@ -203,10 +202,10 @@ nav a {
     color: #f4f1de;
     width: -moz-fit-content;
     width: fit-content;
-    padding: 0 0.75em;
+    padding: 0.25em 0.5em;
     margin:0;
     pointer-events: none;
-    height: 2.5em;
+    height: auto;
 }
 
 /* ***************** */
@@ -249,27 +248,34 @@ nav a {
     background-color: #A5A1FF;
     color: #1B1B1F;
     padding: 0.5em;
-    /* gap: 0.25em; */
-}
-
-.project-preview-desktop {
-    display: none;
 }
 
 .project-preview {
-    height: 17em;
+    height: auto;
+    margin: 0 auto;
+    background-color: #1B1B1F;
+}
+
+/* .project-preview {
+    height: auto;
     margin: 0 auto;
     background-color: #1B1B1F;
     overflow-y: scroll;
-}
+} */
 
 .project-preview img {
     width: 100%;
 }
 
+.project-description {
+    margin-top: 0.25em;
+}
+
 .project-techicons {
     margin-top: 1.25em;
 }
+
+
 
 /* *************** */
 /* Contact Section */
@@ -321,10 +327,6 @@ textarea {
         max-width: 25em;
         margin-top: 1em;
     }
-
-    #skills {
-        flex-direction: row;
-    }
 }
 
 /**********************************************/
@@ -356,6 +358,18 @@ textarea {
         font-size: 5em;
     }
 
+    /* About  section */
+
+    #skills {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .skill-button {
+        padding: 0 0.75em;
+        height: 2.5em;
+    }
+
     /* Portfolio section */
 
     .projects {
@@ -377,6 +391,10 @@ textarea {
         text-decoration: none;
         color: black;
         font-size: 0.9em;
+    }
+
+    form {
+        width: 50vw;
     }
 
 }
