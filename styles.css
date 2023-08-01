@@ -290,6 +290,7 @@ form {
 }
 
 label {
+    display: block;
     margin: 0.5em 0 0.25em;
 }
 
@@ -298,6 +299,7 @@ textarea {
     font-family: inherit;
     font-size: 1em;
     background-color: #f4f1de;
+    width: 100%;
 }
 
 /* ************** */

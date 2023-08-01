@@ -260,16 +260,21 @@
         <section id="contact" class="contact">
             <h1>Contact Me</h1>
             <div id="form">
-                <form action="#">
-                    <label id="type-label">Name:</label>
-                    <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                <form action="#" method="post">
+                    <label for="name">Name: 
+                        <input type="text" name="name" id="name" value="name" placeholder="Enter your name" required></label>
+                    
 
-                    <label id="email-label">Email:</label>
-                    <input type="email" name="email" id="email" value="" placeholder="e.g. johndoe@example.com"
+                    <label for="email">Email:
+                        <input type="email" name="email" id="email" value="email" placeholder="e.g. johndoe@example.com"
                         required>
+                    </label>
+                    
 
-                    <label for="special">Enter your message:</label>
-                    <textarea type="text" name="special" id="special" rows="4"></textarea>
+                    <label for="special">Enter your message:
+                        <textarea type="text" name="special" id="special" rows="4"></textarea>
+                    </label>
+                    
 
                 </form>
             </div>
