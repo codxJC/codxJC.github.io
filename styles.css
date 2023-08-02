@@ -1,8 +1,6 @@
 :root {
     box-sizing: border-box;
     /*Applies border box sizing to the root element*/
-    /* font-size: 0.9rem;
-    line-height: 1.2; */
 }
 
 *,
@@ -93,8 +91,6 @@ nav a {
 #welcome-section h1 {
     font-family: Archivo, sans-serif;
     font-size: 3em;
-    /* margin-top: 3em; */
-    /* color: #A5A1FF; */
 }
 
 #welcome-section p {
@@ -128,23 +124,17 @@ nav a {
 #about h1 {
     font-family: Archivo, sans-serif;
     font-size: 2.5em;
-    /* line-height: 2; */
     color: #1B1B1F;
     margin: 0 auto;
     padding: 1em 0 0.5em;
 }
 
-/* Education Section */
-
-.education {
-    line-height: 1.5;
-}
+/* Skills Section */
 
 #skills {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    column-gap: 4em;
 }
 
 .hard-skills {
@@ -160,7 +150,7 @@ nav a {
     flex-wrap: nowrap;
     justify-content: flex-start;
     margin-top: 1em;
-    /* margin-bottom: 2em; */
+    padding-bottom: 2em;
 }
 
 .coding img,
@@ -179,7 +169,6 @@ nav a {
     flex-wrap: wrap;
     gap: 1em;
     padding-top: 0;
-    margin-bottom: 4em;
 }
 
 .soft-skills {
@@ -187,12 +176,8 @@ nav a {
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 1em;
+    margin-bottom: 4em;
 }
-
-/* .soft-skills h3 {
-    padding-bottom: 1em;
-} */
-
 
 .skill-button {
     font-family: inherit;
@@ -217,7 +202,7 @@ nav a {
     height: auto;
     background-color: #1B1B1F;
     color: #A5A1FF;
-    padding: 0 2em 2em;
+    padding: 0 2em;
 }
 
 #projects h1,
@@ -225,8 +210,7 @@ nav a {
     font-family: Archivo, sans-serif;
     font-size: 2.5em;
     margin: 0 auto;
-    padding: 1em 0 0.5em;
-    /* line-height: 3.5; */
+    padding: 1em 0 1em;
 }
 
 #projects h2,
@@ -250,18 +234,17 @@ nav a {
     padding: 0.5em;
 }
 
+/* creates an element that is the last child of .projects. Adds an empty element after the project-tile. Giving the same width as the otherproject-tiles pushes the last image to the left when the gallery is in a two-column layout.  */
+.projects::after {
+    content: "";
+    width: 400px;    
+}
+
 .project-preview {
     height: auto;
     margin: 0 auto;
     background-color: #1B1B1F;
 }
-
-/* .project-preview {
-    height: auto;
-    margin: 0 auto;
-    background-color: #1B1B1F;
-    overflow-y: scroll;
-} */
 
 .project-preview img {
     width: 100%;
@@ -274,8 +257,6 @@ nav a {
 .project-techicons {
     margin-top: 1.25em;
 }
-
-
 
 /* *************** */
 /* Contact Section */
@@ -336,7 +317,7 @@ textarea {
 /**********************************************/
 
 
-@media (min-width: 49em) {
+@media (min-width: 55em) {
 
     header {
         display: flex;
@@ -365,7 +346,19 @@ textarea {
     #skills {
         flex-direction: row;
         flex-wrap: nowrap;
+        gap: 6em;
+        margin: 0 auto;
     }
+
+    .soft-skills,
+    .hard-skills {
+        width: fit-content;
+        margin: 0 2em 0 0;
+    }
+
+   .soft-skills {
+        align-content: flex-start;
+    } 
 
     .skill-button {
         padding: 0 0.75em;
@@ -382,7 +375,7 @@ textarea {
 
     .project-tile {
         flex-wrap: wrap;
-        /* margin: 2em 0 0; */
+        margin-top: 0;
     }
 
     .project-preview {
