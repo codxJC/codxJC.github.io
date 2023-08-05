@@ -164,19 +164,19 @@ nav a {
     top: 0.3em;
 }
 
-#buttons-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-    padding-top: 0;
-}
-
 .soft-skills {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 1em;
-    margin-bottom: 4em;
+    margin-bottom: 2em;
+}
+
+#buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding-top: 0;
 }
 
 .skill-button {
@@ -266,6 +266,7 @@ form {
     display: flex;
     flex-direction: column;
     width: 75vw;
+    max-width: 750px;
     margin: 0 auto;
     padding-bottom: 2em;
 }
@@ -281,6 +282,14 @@ textarea {
     font-size: 1em;
     background-color: #f4f1de;
     width: 100%;
+}
+
+.contact p {
+    margin: 0 auto;
+    width: 75vw;
+    max-width: 750px;
+    font-style: italic;
+    color: chartreuse;
 }
 
 /* ************** */
@@ -313,7 +322,7 @@ textarea {
 }
 
 /**********************************************/
-/********* Devices Larger than 784px **********/
+/********* Devices Larger than 880px **********/
 /**********************************************/
 
 
@@ -345,20 +354,25 @@ textarea {
 
     #skills {
         flex-direction: row;
-        flex-wrap: nowrap;
-        gap: 6em;
+        gap: 0;
         margin: 0 auto;
     }
 
-    .soft-skills,
     .hard-skills {
         width: fit-content;
-        margin: 0 2em 0 0;
+        padding: 0 2em;
     }
 
    .soft-skills {
         align-content: flex-start;
+        width: fit-content;
+        margin: 0 0 2em;
+        padding: 0 2em;
     } 
+
+    .soft-skills h3 {
+        width: 100%;
+    }
 
     .skill-button {
         padding: 0 0.75em;
@@ -392,4 +406,22 @@ textarea {
         width: 50vw;
     }
 
+    .contact p {
+        width: 50vw;
+    }
+
+}
+
+/**********************************************/
+/********* Devices Larger than 1440px **********/
+/**********************************************/
+
+@media (min-width: 90em) {
+    #skills {
+        margin: 0 auto;
+        padding: 0 2em 0;
+        max-width: 75vw;
+        column-gap: 6em;
+       
+    }
 }
