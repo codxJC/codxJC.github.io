@@ -235,7 +235,7 @@ nav a {
     padding: 0.5em;
 }
 
-/* creates an element that is the last child of .projects. Adds an empty element after the project-tile. Giving the same width as the otherproject-tiles pushes the last image to the left when the gallery is in a two-column layout.  */
+/* creates an element that is the last child of .projects. Adds an empty element after the project-tile. Giving the same width as the other project-tiles pushes the last image to the left when the gallery is in a two-column layout.  */
 .projects::after {
     content: "";
     width: 400px;    
@@ -415,7 +415,7 @@ textarea {
 }
 
 /**********************************************/
-/********* Devices Larger than 1440px **********/
+/********* Devices Larger than 1440px *********/
 /**********************************************/
 
 @media (min-width: 90em) {
@@ -425,5 +425,20 @@ textarea {
         max-width: 75vw;
         column-gap: 6em;
        
+    }
+
+    .projects::after {
+        width: 400px;    
+    }
+}
+
+/**********************************************/
+/********* Devices Larger than 1736px *********/
+/**********************************************/
+
+@media (min-width: 108em) {
+
+    .projects::after {
+        width: 1248px;    
     }
 }
